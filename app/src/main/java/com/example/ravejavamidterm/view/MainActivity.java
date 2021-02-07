@@ -25,6 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Toast.makeText(this, animal, Toast.LENGTH_SHORT).show();
-        viewModel.fetchPictures("nude women", 20);
+        viewModel.fetchPictures("sailboat lighthouse", 850);
     }
 }
