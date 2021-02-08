@@ -21,11 +21,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainViewModel extends ViewModel {
-//    private MutableLiveData<PexelsModel> _pictures = new MutableLiveData<>();
-//    private LiveData<PexelsModel> getPictures() {
-//        return _pictures;
-//    }
-
     private List<Photo> photoList;
     private MutableLiveData<List<Photo>> _photos = new MutableLiveData<>();
     public LiveData<List<Photo>> getPhotos() { return _photos; }

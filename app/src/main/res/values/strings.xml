@@ -16,6 +16,7 @@
 
 <resources>
     <string name="app_name">Build a Material Theme</string>
+    <string name="notify_friends">Notify Friends</string>
 
     <!--Main-->
 
