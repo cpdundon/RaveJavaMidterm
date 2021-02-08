@@ -58,7 +58,7 @@ public class MainViewModel extends ViewModel {
                     @NotNull Call<PexelsModel> call,
                     @NotNull Response<PexelsModel> response) {
                 PexelsModel pexData = response.body();
-//
+
                 if (pexData.page <= ((pexData.total_results - 1) / Constants.PEXELS_MAX_PAGE_SIZE)) {
                     photoList = pexData.photos;
                     fetchPictures(query, pexData.page + 1, imageCap);

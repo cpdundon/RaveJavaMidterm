@@ -57,7 +57,7 @@ public class DetailView extends AppCompatActivity {
 
         Glide.with(binding.getRoot().getRootView()).load(photoUrl).into(this.binding.ivImage);
         setListeners(photoUrl);
-        
+
         Toast.makeText(DetailView.this, "DONE!", Toast.LENGTH_SHORT).show();
     }
 
