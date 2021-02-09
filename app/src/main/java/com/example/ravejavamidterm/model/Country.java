@@ -7,6 +7,12 @@ public class Country {
     private String subregion;
     private Long population;
 
+    public String getFlag() {
+        return flag;
+    }
+
+    private String flag;
+
     public String getName() {
         return name;
     }
@@ -27,11 +33,12 @@ public class Country {
         return population;
     }
 
-    public Country(String name, String capital, String region, String subregion, Long population) {
+    public Country(String name, String capital, String region, String subregion, Long population, String flag) {
         this.name = name;
         this.capital = capital;
         this.region = region;
         this.subregion = subregion;
         this.population = population;
+        this.flag = flag;
     }
 }

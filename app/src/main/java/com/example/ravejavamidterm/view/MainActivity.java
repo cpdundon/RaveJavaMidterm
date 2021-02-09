@@ -44,16 +44,6 @@ public class MainActivity extends AppCompatActivity {
         setGridLayoutMgr(gridFormat);
     }
 
-    private void handleResults(Crypto.Ticker ticker) {
-        Toast.makeText(this, "INFO BACK!", Toast.LENGTH_SHORT);
-    }
-
-    private void handleError(Throwable t) {
-
-        Toast.makeText(this, "ERROR IN FETCHING API RESPONSE. Try again",
-                Toast.LENGTH_LONG).show();
-    }
-
     private void setUpObservers() {
         viewModel.getPhotos().observe(this, new Observer<List<Photo>>() {
             @Override

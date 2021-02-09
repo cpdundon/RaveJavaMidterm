@@ -8,13 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.ravejavamidterm.adapter.PictureAdapter;
-import com.example.ravejavamidterm.databinding.ActivityMainBinding;
 import com.example.ravejavamidterm.databinding.CryptoPriceDisplayBinding;
 import com.example.ravejavamidterm.model.Crypto;
-import com.example.ravejavamidterm.model.Photo;
 import com.example.ravejavamidterm.viewModel.CryptoViewModel;
-import com.example.ravejavamidterm.viewModel.MainViewModel;
 
 import java.util.List;
 
