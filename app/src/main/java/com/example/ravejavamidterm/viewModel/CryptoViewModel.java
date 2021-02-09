@@ -34,8 +34,12 @@ public class CryptoViewModel extends ViewModel {
     public LiveData<String> getStatus() { return _status; };
 
     public void fetchPrice(String coin) {
-        CryptoRepository.getInstance().getCoinData(coin).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                .map(result -> result.ticker).subscribe(new Observer<Crypto.Ticker>() {
+        CryptoRepository.getInstance()
+                .getCoinData(coin)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .map(result -> result.ticker)
+                .subscribe(new Observer<Crypto.Ticker>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
                         _status.setValue("Loading...");
