@@ -8,18 +8,16 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
-import android.provider.Contacts;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.ravejavamidterm.R;
 import com.example.ravejavamidterm.adapter.PictureAdapter;
 import com.example.ravejavamidterm.databinding.ActivityMainBinding;
+import com.example.ravejavamidterm.model.Crypto;
 import com.example.ravejavamidterm.model.Photo;
 import com.example.ravejavamidterm.utils.Constants;
 import com.example.ravejavamidterm.viewModel.MainViewModel;
-import com.google.android.material.textview.MaterialTextView;
 
 import java.util.List;
 
@@ -44,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
 
         viewModel.fetchPictures(Constants.PEXELS_DEFAULT_QUERY, Constants.PEXELS_DEFAULT_COUNT);
         setGridLayoutMgr(gridFormat);
+    }
+
+    private void handleResults(Crypto.Ticker ticker) {
+        Toast.makeText(this, "INFO BACK!", Toast.LENGTH_SHORT);
+    }
+
+    private void handleError(Throwable t) {
+
+        Toast.makeText(this, "ERROR IN FETCHING API RESPONSE. Try again",
+                Toast.LENGTH_LONG).show();
     }
 
     private void setUpObservers() {
